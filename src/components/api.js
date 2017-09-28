@@ -1,5 +1,5 @@
 import React from 'react';
-import TicketsImpression from './tckets';
+import StatusImpression from './tckets';
 
 class OptionsTickets extends React.Component {
         
@@ -22,7 +22,7 @@ class OptionsTickets extends React.Component {
             if (this.state.options.length > 0) {
               return (
                 <div className="container-fluid">
-                  <TicketsImpression listado={this.state.options} />
+                  <StatusImpression listado={this.state.options} />
                 </div>
               )
             } else {

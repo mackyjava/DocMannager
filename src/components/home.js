@@ -1,5 +1,5 @@
 import React from 'react';
-import TicketsImpression from './api'
+import StatusImpression from './api'
 
 
 const Home = ()=> (
@@ -11,27 +11,59 @@ const Home = ()=> (
             </div>
             <hr/>
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-4 text-left">
                     <button  className="btn btn-danger" data-toggle="collapse" data-target="#demo" aria-expanded="false">
-                        Tickets
+                        Type
                     </button>
                     <div id="demo" className="width collapse show" aria-expanded="false">
                         <div className="list-group" style={{width: "400px"}}>
-                           <TicketsImpression/>
+                           <select name="" id="Type">
+                               <option value="0">--select--</option>
+                               <option value="1">Tickets</option>
+                               <option value="2">Exceptions</option>
+                           </select>
                         </div>
                     </div>
-                </div>
-                <div className="col-md-6">
-                    <button  className="btn btn-danger" data-toggle="collapse" data-target="#demo2" aria-expanded="true">
-                       Documents
+                    <br/>
+                    <div className="col-md-4">
+                           <button  className="btn btn-danger" data-toggle="collapse" data-target="#demo1" aria-expanded="false">
+                              Status
+                           </button>
+                           <div id="demo1" className="width collapse show" aria-expanded="false">
+                               <div className="list-group" style={{width: "400px"}}>
+                                  <StatusImpression/>
+                               </div>
+                            </div> 
+                        </div> 
+                               <br/>
+                               <form>
+                                   <span>Ticket ID.</span>
+                                  <input type="text" className="form-addon" placeholder="Ticket Id"/>
+                               </form>
+                           </div>
+                        </div>
+                       <br/>
+                       <div className="col-md-4 text-left">
+                          <button  className="btn btn-danger" data-toggle="collapse" data-target="#demo2" aria-expanded="false">
+                               Template
+                          </button>
+                           <div id="demo2" className="width collapse show" aria-expanded="false">
+                        <div>
+                           <p>hola</p>
+                        </div>
+                    </div>
+                    </div>
+                    <br/>
+                    <div className="col-md-6 text-left">
+                    <button  className="btn btn-danger" data-toggle="collapse" data-target="#col3" aria-expanded="false">
+                       Template Type
                     </button>
-                    <div id="demo2" className="height collapse show" aria-expanded="true">
+                    <div id="col3" className="width collapse show col-md-4" aria-expanded="true">
                         <div>
                            <p>hola</p>
                         </div>
                     </div>
                 </div>
-            </div>
         </main>
 )
 export default Home;

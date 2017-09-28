@@ -1,7 +1,7 @@
 import React from 'react';
 import TicketRow from './row';
 
-class TicketsImpresion extends React.Component {
+class StatusImpresion extends React.Component {
     
       render() {
         return (
@@ -19,4 +19,4 @@ class TicketsImpresion extends React.Component {
         )
       }
     }
-export default TicketsImpresion;
+export default StatusImpresion;
